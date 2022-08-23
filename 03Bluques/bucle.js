@@ -28,3 +28,5 @@ estas llaves son los indices*/
 for(const indice in razasDePerros){
     console.log(razasDePerros[indice]);
 }
+
+module.exports.razasDePerros = razasDePerros;

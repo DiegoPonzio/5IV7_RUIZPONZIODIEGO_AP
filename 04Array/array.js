@@ -1,3 +1,5 @@
+const razasDePerros = require("../03Bluques/bucle").razasDePerros;
+
 /*Array
 ForEach itera sobre los elementos del arreglo, no regresa nada
 En la siguiente linea de codigo hace lo mismo que un bucle;
@@ -24,7 +26,7 @@ if (razasDePerros.find((raza, indice, arregloOriginal) => raza === "Chihuahua"))
 }else{
     //hay que meterlo
     razasDePerros.push("Chihuahua");
-    console.log("Sse agrego la raza")
+    console.log("Se agrego la raza")
 }
 /**findIndex
  * es similar, pero en lugar de regresar el elemento devuelve su indice sino lo encuentra, devuelve -1
