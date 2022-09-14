@@ -1,0 +1,16 @@
+body{
+    background: url("fondo.jfif");
+    background-repeat: repeat;
+    justify-content: center;
+    align-items: center;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.txts{
+    color:rgb(85, 44, 100);
+    font-size: 10vw;
+}
+

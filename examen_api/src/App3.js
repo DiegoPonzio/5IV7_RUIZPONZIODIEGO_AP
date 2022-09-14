@@ -1,11 +1,10 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import './style1.css';
-import './style2.css'
+import './style3.css';
 
-function App2() {
+function App3() {
 
-    const URL = "https://swapi.dev/api/people/"
+    const URL = "https://swapi.dev/api/planets/"
     const [todos, setTodos] = useState()
     const fetchAPI = async () => {
         const response = await fetch(URL)
@@ -17,26 +16,28 @@ function App2() {
     }, [])
     return (
         <div className="blockInfo">
-            <h1 className='nameCard'>Personajes de Star Wars</h1>
+            <h1 className='nameCard'>Planetas de Star Wars</h1>
             <br></br>
-            {!todos ? <div className="container">Cargando... <span id="linea"></span></div> : todos.results.map((todo, index) => {
-                return <article className="card">
+            {!todos ? <div className="container2">Cargando... <span id="linea2"></span></div> : todos.results.map((todo, index) => {
+                return <article className="cardp">
                     <div className='card_content'>
                         <h3 className='card_title'>{todo.name}</h3>
                         <p className='card_description'>
-                            Año de Nacimiento: {todo.birth_year !== "unknown" ? todo.birth_year : "Desconocido"}
+                            Período de rotación: {todo.rotation_period}
                             <br></br>
-                            Color de ojos: {todo.eye_color}
+                            Período de orbita: {todo.orbital_period}
                             <br></br>
-                            Género: {todo.gender}
+                            Diametro: {todo.diameter}
                             <br></br>
-                            Color de pelo: {todo.hair_color}
+                            Clima: {todo.climate}
                             <br></br>
-                            Estatura (cm): {todo.height}
+                            Gravedad: {todo.gravity}
                             <br></br>
-                            Masa (kg): {todo.mass}
+                            Terreno: {todo.terrain}
                             <br></br>
-                            Color de piel: {todo.skin_color}
+                            Superficie de agua: {todo.surface_water}
+                            <br></br>
+                            Población: {todo.population}
                         </p>
                     </div>
                 </article>
@@ -45,4 +46,4 @@ function App2() {
     );
 }
 
-export default App2;
+export default App3;
